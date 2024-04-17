@@ -23,3 +23,4 @@ on master kubectl get nodes
 calico ::
 curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.3/manifests/calico-typha.yaml -o calico.yaml
 kubectl apply -f calico.yaml
+Good
