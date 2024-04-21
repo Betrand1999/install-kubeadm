@@ -12,12 +12,13 @@ gpgkey=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/repodata/repomd.xml.key
 exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni
 EOF
 
-Install docker
+Install docker yum install docker -y 
 sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 
 
 sudo systemctl enable --now kubelet
 on master kubeadm init 
+# make the master node has the port open 
 
 on master kubectl get nodes
 calico ::
