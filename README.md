@@ -21,7 +21,7 @@ on master kubeadm init
 # make the master node has the port open 
 
 on master kubectl get nodes
-calico ::
+calico network 
 curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.3/manifests/calico-typha.yaml -o calico.yaml
 kubectl apply -f calico.yaml
 Good
