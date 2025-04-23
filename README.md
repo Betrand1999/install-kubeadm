@@ -25,3 +25,6 @@ calico network
 curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.3/manifests/calico-typha.yaml -o calico.yaml
 kubectl apply -f calico.yaml
 Good
+# FOR A SINGLE NODE
+sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+kubectl taint nodes --all node-role.kubernetes.io/control-plane-
